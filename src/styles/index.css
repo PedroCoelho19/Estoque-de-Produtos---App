@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 1000px) {
+  #animation-singin {
+    display: none;
+  }
+}
+
+@media (max-width: 300px) {
+  .action-button-group {
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 956px) {
+  .navbar,
+  .sidebar {
+    display: none;
+  }
+
+  .card-group-buttons{
+    margin-top: 0px;
+  }
+
+}
+
+.list-group-buttons{
+  overflow-x: hidden;
+}
+
+.list-group-buttons::-webkit-scrollbar{
+  display: none;
+}
+
+#root {
+  max-width: 1280px;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.bg-root-image{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../assets/bgProducaoTijuca.png'); 
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  justify-content: center;  
+  overflow: auto;
+}
+
+.items-data{
+  color: #FCD63B;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px none black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #111827;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: 110px;
+  top:10%;
+  min-height: 30px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #111827 transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 403px) {
+  #font-description {
+    white-space: nowrap; 
+    width: 12em; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+  }
+}
+
+
